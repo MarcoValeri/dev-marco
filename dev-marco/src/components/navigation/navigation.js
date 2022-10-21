@@ -7,7 +7,7 @@ const Navigation = () => {
             <div className="nav__toggle">
                 <label for="nav menu" aria-label="nav menu"></label>
                 <input id="nav menu" name="nav menu" class="nav__input" type="checkbox" aria-label="nav menu" />
-                <span class="nav__span"></span>
+                <span class="nav__span nav__span--empty"></span>
                 <span class="nav__span"></span>
                 <span class="nav__span"></span>
                 <ul className="nav__menu">

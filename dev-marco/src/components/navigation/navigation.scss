@@ -57,19 +57,16 @@
 
     &__span {
         @include respond(md) {
-            display: block;
-            width: 33px;
-            height: 4px;
-            margin-bottom: 5px;
             position: relative;
-
+            display: block;
+            width: 4rem;
+            height: .5rem;
+            margin-bottom: 5px;
             background: $black;
-            border-radius: 3px;
-
+            border: 2px solid $black;
+            border-radius: 5px;
             z-index: 1;
-
             transform-origin: 4px 0px;
-
             transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                         opacity 0.55s ease;
@@ -80,6 +77,13 @@
 
             &:nth-last-child(2) {
                 transform-origin: 0% 100%;
+            }
+        }
+
+        &--empty {
+            @include respond(md) {
+                border: 2px solid $black;
+                background-color: transparent;
             }
         }
     }
