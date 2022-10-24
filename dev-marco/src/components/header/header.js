@@ -17,28 +17,28 @@ const Header = () => {
                     <h1 className="header__title h1">Marco Valeri</h1>
                     <h2 className="header__title-sub h2">Full Stack Developer</h2>
                     <div className="header__container-icons">
-                        <IconContext.Provider value={{ className: 'icon icon__node' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__node header__icon-node' }}>
                             <FaNodeJs />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__react' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__react header__icon-react' }}>
                             <FaReact />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__php' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__php header__icon-php' }}>
                             <FaPhp />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__symfony' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__symfony header__icon-symfony' }}>
                             <FaSymfony />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__mysql' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__mysql header__icon-mysql' }}>
                             <SiMysql />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__sass' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__sass header__icon-sass' }}>
                             <FaSass />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__css' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__css header__icon-css' }}>
                             <FaCss3Alt />
                         </IconContext.Provider>
-                        <IconContext.Provider value={{ className: 'icon icon__html' }}>
+                        <IconContext.Provider value={{ className: 'icon icon__html header__icon-html' }}>
                             <FaHtml5 />
                         </IconContext.Provider>
                     </div>

@@ -46,6 +46,38 @@
         animation: move-in-up 1s ease-in-out;
     }
 
+    &__icon-node {
+        animation: move-icon-up 8s infinite;
+    }
+
+    &__icon-react {
+        animation: move-icon-up 8s infinite 1s;
+    }
+
+    &__icon-php {
+        animation: move-icon-up 8s infinite 2s;
+    }
+
+    &__icon-symfony {
+        animation: move-icon-up 8s infinite 3s;
+    }
+
+    &__icon-mysql {
+        animation: move-icon-up 8s infinite 4s;
+    }
+
+    &__icon-sass {
+        animation: move-icon-up 8s infinite 5s;
+    }
+
+    &__icon-css {
+        animation: move-icon-up 8s infinite 6s;
+    }
+
+    &__icon-html {
+        animation: move-icon-up 8s infinite 7s;
+    }
+
 }
 
 // Animations
@@ -98,6 +130,30 @@
 
     100% {
         transform: translate(0);
+    }
+
+}
+
+@keyframes move-icon-up {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 
 }
