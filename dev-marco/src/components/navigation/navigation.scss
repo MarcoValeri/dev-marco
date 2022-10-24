@@ -1,9 +1,10 @@
 @import '../../App.scss';
 
 .nav {
+    // font-family: 'Fuzzy Bubbles', cursive;
     text-align: center;
     padding: 2rem 0;
-    border: 1px solid #f00;
+    // border: 1px solid #f00;
 
     @include respond(md) {
         border: 1px solid #00f;
