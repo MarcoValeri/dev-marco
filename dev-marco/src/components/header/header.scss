@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .header {
     height: 90vh;
     font-family: 'Fuzzy Bubbles', cursive;
@@ -11,17 +13,28 @@
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     border: 1px solid #000;
 
+    @include respond(md) {
+        height: 100vh;
+    }
+
     &__container-content {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         height: 80%;
+
+        @include respond(md) {
+            align-items: flex-start;
+        }
     }
 
     &__content-wrapper {
         text-align: center;
-        margin-top: 6rem;
         padding: 2rem;
+    }
+
+    &__title-sub {
+        margin-bottom: 1rem;
     }
 
 }
