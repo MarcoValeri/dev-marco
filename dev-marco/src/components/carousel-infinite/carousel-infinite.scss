@@ -1,17 +1,18 @@
 .carousel-infinite {
     width: 200rem;
-    height: 15rem;
+    height: 10rem;
     display: flex;
     overflow: hidden;
     margin: 10rem auto;
-    border: 1px solid #f00;
 
     &__item {
-        width: 20rem;
-        height: 40rem;
+        width: 15rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 2rem;
         animation: slide 15s linear infinite;
-        border: 1px solid #00f;
     }
 }
 
@@ -20,6 +21,6 @@
         transform: translate(0, 0, 0);
     }
     100% {
-        transform: translate3d(-200rem, 0, 0); // 200rem are the with of the parent container
+        transform: translate3d(-60rem, 0, 0); // 200rem are the with of the parent container
     }
 }

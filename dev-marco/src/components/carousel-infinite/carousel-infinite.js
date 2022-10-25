@@ -1,28 +1,26 @@
 // Import style file
 import './carousel-infinite.scss';
 
-const CarouselInfinite = () => {
+const CarouselInfinite = ({ carouselItems }) => {
+
+    const getCarouseItems = (items) => {
+
+        let output = [];
+
+        items.forEach(item => {
+            output.push(
+                <div className="carousel-infinite__item">
+                    <p>{item}</p>
+                </div>
+                );
+        });
+
+        return output;
+    }
 
     return (
         <section className="carousel-infinite">
-            <div className="carousel-infinite__item">
-                <p>Item 1</p>
-            </div>
-            <div className="carousel-infinite__item">
-                <p>Item 2</p>
-            </div>
-            <div className="carousel-infinite__item">
-                <p>Item 3</p>
-            </div>
-            <div className="carousel-infinite__item">
-                <p>Item 4</p>
-            </div>
-            <div className="carousel-infinite__item">
-                <p>Item 5</p>
-            </div>
-            <div className="carousel-infinite__item">
-                <p>Item 6</p>
-            </div>
+            {getCarouseItems(carouselItems)}
         </section>
     )
 }
