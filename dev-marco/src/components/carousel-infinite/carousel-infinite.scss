@@ -1,39 +1,25 @@
 .carousel-infinite {
+    width: 200rem;
+    height: 15rem;
+    display: flex;
     overflow: hidden;
     margin: 10rem auto;
-
-    &__container {
-        position: relative;
-        width: 100vw;
-        height: 20rem;
-        overflow-x: hidden;
-        border: 1px solid #f00;
-    }
-
-    &__scroll-wrapper {
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        animation: primary 10s linear infinite;
-    }
+    border: 1px solid #f00;
 
     &__item {
-        width: 10rem;
-        height: 10rem;
-        border: 1px solid #f00;
+        width: 20rem;
+        height: 40rem;
+        margin: 0 2rem;
+        animation: slide 15s linear infinite;
+        border: 1px solid #00f;
     }
 }
 
-@keyframes primary {
-
-    from {
-        left: 0%;
+@keyframes slide {
+    0% {
+        transform: translate(0, 0, 0);
     }
-
-    to {
-        left: -100%;
+    100% {
+        transform: translate3d(-200rem, 0, 0); // 200rem are the with of the parent container
     }
-
 }

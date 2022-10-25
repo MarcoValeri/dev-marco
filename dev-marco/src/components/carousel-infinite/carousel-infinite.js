@@ -2,44 +2,26 @@
 import './carousel-infinite.scss';
 
 const CarouselInfinite = () => {
+
     return (
         <section className="carousel-infinite">
-            <div className="carousel-infinite__container">
-                <div className="carousel-infinite__scroll-wrapper">
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                    <div className="carousel-infinite__item">
-                        <h1>item 1</h1>
-                    </div>
-                </div>
+            <div className="carousel-infinite__item">
+                <p>Item 1</p>
+            </div>
+            <div className="carousel-infinite__item">
+                <p>Item 2</p>
+            </div>
+            <div className="carousel-infinite__item">
+                <p>Item 3</p>
+            </div>
+            <div className="carousel-infinite__item">
+                <p>Item 4</p>
+            </div>
+            <div className="carousel-infinite__item">
+                <p>Item 5</p>
+            </div>
+            <div className="carousel-infinite__item">
+                <p>Item 6</p>
             </div>
         </section>
     )
