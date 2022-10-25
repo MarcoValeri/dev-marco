@@ -1,9 +1,16 @@
 .carousel-infinite {
-    width: 200rem;
-    height: 10rem;
-    display: flex;
-    overflow: hidden;
+    width: 100%;
+    height: auto;
     margin: 10rem auto;
+    overflow: hidden;
+
+    &__wrapper {
+        width: 200rem;
+        height: 10rem;
+        display: flex;
+        overflow: hidden;
+        margin: auto;
+    }
 
     &__item {
         width: 15rem;

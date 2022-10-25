@@ -54,28 +54,32 @@
         animation: move-icon-up 8s infinite 1s;
     }
 
-    &__icon-php {
+    &__icon-javascript {
         animation: move-icon-up 8s infinite 2s;
     }
 
-    &__icon-symfony {
+    &__icon-php {
         animation: move-icon-up 8s infinite 3s;
     }
 
-    &__icon-mysql {
+    &__icon-symfony {
         animation: move-icon-up 8s infinite 4s;
     }
 
-    &__icon-sass {
+    &__icon-mysql {
         animation: move-icon-up 8s infinite 5s;
     }
 
-    &__icon-css {
+    &__icon-sass {
         animation: move-icon-up 8s infinite 6s;
     }
 
-    &__icon-html {
+    &__icon-css {
         animation: move-icon-up 8s infinite 7s;
+    }
+
+    &__icon-html {
+        animation: move-icon-up 8s infinite 8s;
     }
 
 }

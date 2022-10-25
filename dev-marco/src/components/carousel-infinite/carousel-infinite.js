@@ -7,10 +7,10 @@ const CarouselInfinite = ({ carouselItems }) => {
 
         let output = [];
 
-        items.forEach(item => {
+        items.forEach((item, index) => {
             output.push(
-                <div className="carousel-infinite__item">
-                    <p>{item}</p>
+                <div key={index} className="carousel-infinite__item">
+                    {item}
                 </div>
                 );
         });
@@ -20,7 +20,9 @@ const CarouselInfinite = ({ carouselItems }) => {
 
     return (
         <section className="carousel-infinite">
-            {getCarouseItems(carouselItems)}
+            <div className="carousel-infinite__wrapper">
+                {getCarouseItems(carouselItems)}
+            </div>
         </section>
     )
 }

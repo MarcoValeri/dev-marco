@@ -56,6 +56,10 @@
         font-size: 3rem;
     }
 
+    &__javascript {
+        color: $yellow-javascript;
+    }
+
     &__node {
         color: $green-node;
     }
@@ -82,6 +86,10 @@
 
     &__html {
         color: $red-html;
+    }
+
+    &__wordpress {
+        color: $blue-wordpress;
     }
 }
 

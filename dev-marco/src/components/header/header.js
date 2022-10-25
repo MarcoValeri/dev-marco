@@ -3,7 +3,7 @@ import Navigation from "../navigation/navigation";
 // Import Icons
 import { IconContext } from 'react-icons/lib';
 import { FaNodeJs, FaReact, FaPhp, FaSymfony, FaSass, FaCss3Alt, FaHtml5 } from 'react-icons/fa';
-import { SiMysql } from 'react-icons/si';
+import { SiMysql, SiJavascript } from 'react-icons/si';
 
 // Import style file
 import './header.scss';
@@ -22,6 +22,9 @@ const Header = () => {
                         </IconContext.Provider>
                         <IconContext.Provider value={{ className: 'icon icon__react header__icon-react' }}>
                             <FaReact />
+                        </IconContext.Provider>
+                        <IconContext.Provider value={{ className: 'icon icon__javascript header__icon-javascript' }}>
+                            <SiJavascript />
                         </IconContext.Provider>
                         <IconContext.Provider value={{ className: 'icon icon__php header__icon-php' }}>
                             <FaPhp />
