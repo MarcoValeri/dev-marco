@@ -17,6 +17,8 @@ const Portfolio = () => {
                         projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                         projectTitle="Project Title"
                         projectDescription="Web Application with NodeJs, React and MySQL eeeeeeeeee eeeeeeeeee eeeeeeee"
+                        showRepository={true}
+                        projectRepository="https://arenko-aug.sobold.dev/"
                         projectUrl="https://www.google.com"
                         projectButton="Google"
                     />

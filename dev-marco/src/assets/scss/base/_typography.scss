@@ -91,6 +91,14 @@
     &__wordpress {
         color: $blue-wordpress;
     }
+
+    &__github {
+        color: $black-github;
+
+        &--white {
+            color: $white;
+        }
+    }
 }
 
 // Link

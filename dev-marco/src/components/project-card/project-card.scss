@@ -31,6 +31,10 @@
             transform: scale(1.1);
         }
 
+        @include respond(md) {
+            opacity: 1;
+        }
+
         @include respond(sm) {
             height: auto;
             min-height: 30rem;
