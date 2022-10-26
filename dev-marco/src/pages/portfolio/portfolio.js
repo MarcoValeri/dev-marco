@@ -9,7 +9,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <Header />
+            <Header subTitle="Portfolio" />
             <TitleElastic title="Portfolio" />
             <div className="portfolio">
                 <div className="portfolio__container">

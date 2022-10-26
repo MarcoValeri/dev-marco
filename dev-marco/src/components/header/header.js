@@ -8,14 +8,14 @@ import { SiMysql, SiJavascript } from 'react-icons/si';
 // Import style file
 import './header.scss';
 
-const Header = () => {
+const Header = ({ subTitle }) => {
     return (
         <header className="header">
             <Navigation />
             <div className="header__container-content">
                 <div className="header__content-wrapper">
                     <h1 className="header__title h1">Marco Valeri</h1>
-                    <h2 className="header__title-sub h2">Full Stack Developer</h2>
+                    <h2 className="header__title-sub h2">{ subTitle }</h2>
                     <div className="header__container-icons">
                         <IconContext.Provider value={{ className: 'icon icon__node header__icon-node' }}>
                             <FaNodeJs />

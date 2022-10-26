@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Header subTitle="Full Stack Developer" />
             <CarouselInfinite />
         </>
     )
