@@ -1,5 +1,6 @@
 import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
+import TitleElastic from '../../components/title-elastic/title-elastic';
 
 import './portfolio.scss';
 
@@ -8,6 +9,7 @@ const Portfolio = () => {
     return (
         <>
             <Header />
+            <TitleElastic title="Portfolio" />
             <div className="portfolio">
                 <div className="portfolio__container">
                     <ProjectCard
