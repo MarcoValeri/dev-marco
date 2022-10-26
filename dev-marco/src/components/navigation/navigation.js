@@ -1,4 +1,5 @@
-// Import style file
+import { Link } from 'react-router-dom';
+
 import './navigation.scss';
 
 const Navigation = () => {
@@ -11,10 +12,10 @@ const Navigation = () => {
                 <span className="nav__span"></span>
                 <span className="nav__span"></span>
                 <ul className="nav__menu">
-                    <li className="nav__menu-item"><a className="link-no-style body-3 link-effect-load link-highlight" href="#">Home</a></li>
-                    <li className="nav__menu-item"><a className="link-no-style body-3 link-effect-load" href="#">Portfolio</a></li>
-                    <li className="nav__menu-item"><a className="link-no-style body-3 link-effect-load" href="#">About Me</a></li>
-                    <li className="nav__menu-item"><a className="link-no-style body-3 link-effect-load" href="#">Contact</a></li>
+                    <li className="nav__menu-item"><Link to='/' className="link-no-style body-3 link-effect-load link-highlight" rel="noopener noreferrer">Home</Link></li>
+                    <li className="nav__menu-item"><Link to='/portfolio' className="link-no-style body-3 link-effect-load" rel="noopener noreferrer">Portfolio</Link></li>
+                    <li className="nav__menu-item"><Link to='/' className="link-no-style body-3 link-effect-load" rel="noopener noreferrer">About Me</Link></li>
+                    <li className="nav__menu-item"><Link to='/' className="link-no-style body-3 link-effect-load" rel="noopener noreferrer">Contact</Link></li>
                 </ul>
             </div>
         </nav>
