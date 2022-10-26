@@ -1,3 +1,4 @@
+import CarouselInfinite from '../../components/carousel-infinite-skills/carousel-infinite-skills';
 import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
 import TitleElastic from '../../components/title-elastic/title-elastic';
@@ -49,6 +50,7 @@ const Portfolio = () => {
                     />
                 </div>
             </div>
+            <CarouselInfinite />
         </>
     )
 
