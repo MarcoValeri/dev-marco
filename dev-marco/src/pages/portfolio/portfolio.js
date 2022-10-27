@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import CarouselInfinite from '../../components/carousel-infinite-skills/carousel-infinite-skills';
 import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
@@ -6,6 +8,24 @@ import TitleElastic from '../../components/title-elastic/title-elastic';
 import './portfolio.scss';
 
 const Portfolio = () => {
+
+    const [projects, setProjects] = useState('Empty');
+
+    // Get projects by API
+    React.useEffect(() => {
+        fetch('/api/projects')
+            .then((res) => res.json())
+            .then((data) => setProjects(data.project.projects));
+    }, []);
+
+    if (typeof projects === 'object') {
+        console.log(`First statement`);
+        projects.forEach((project, index) => {
+            console.log(`Project:  ${project.projectTitle}`);
+        });
+    } else {
+        console.log(`Second statement`);
+    }
 
     return (
         <>
