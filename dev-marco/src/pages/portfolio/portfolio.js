@@ -18,14 +18,37 @@ const Portfolio = () => {
             .then((data) => setProjects(data.project.projects));
     }, []);
 
-    if (typeof projects === 'object') {
-        console.log(`First statement`);
-        projects.forEach((project, index) => {
-            console.log(`Project:  ${project.projectTitle}`);
-        });
-    } else {
-        console.log(`Second statement`);
-    }
+    /**
+     * Create a function that gets
+     * @param object gerProjects
+     * and
+     * @return array with all projects
+     *
+     * If the parameter is not an object,
+     * the function return an empty array
+     */
+    const getProjectsItems = (getProjects) => {
+
+        let output = [];
+
+        if (typeof getProjects === 'object') {
+            getProjects.forEach((project, index) => {
+                output.push(
+                    <ProjectCard
+                        projectImage={project.projectImage}
+                        projectTitle={project.projectTitle}
+                        projectDescription={project.projectDescription}
+                        showRepository={project.showRepository}
+                        projectRepository={project.projectRepository}
+                        projectUrl={project.projectUrl}
+                        projectButton={project.projectButton}
+                    />
+                )
+            })
+        }
+
+        return output;
+    };
 
     return (
         <>
@@ -33,43 +56,7 @@ const Portfolio = () => {
             <TitleElastic title="Portfolio" />
             <div className="portfolio">
                 <div className="portfolio__container">
-                    <ProjectCard
-                        projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                        projectTitle="Project Title"
-                        projectDescription="Web Application with NodeJs, React and MySQL eeeeeeeeee eeeeeeeeee eeeeeeee"
-                        showRepository={true}
-                        projectRepository="https://arenko-aug.sobold.dev/"
-                        projectUrl="https://www.google.com"
-                        projectButton="Google"
-                    />
-                    <ProjectCard
-                        projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                        projectTitle="Project Title"
-                        projectDescription="Web Application with NodeJs, React and MySQL"
-                        projectUrl="https://www.google.com"
-                        projectButton="Google"
-                    />
-                    <ProjectCard
-                        projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                        projectTitle="Project Title"
-                        projectDescription="Web Application with NodeJs, React and MySQL"
-                        projectUrl="https://www.google.com"
-                        projectButton="Google"
-                    />
-                    <ProjectCard
-                        projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                        projectTitle="Project Title"
-                        projectDescription="Web Application with NodeJs, React and MySQL"
-                        projectUrl="https://www.google.com"
-                        projectButton="Google"
-                    />
-                    <ProjectCard
-                        projectImage="https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                        projectTitle="Project Title"
-                        projectDescription="Web Application with NodeJs, React and MySQL"
-                        projectUrl="https://www.google.com"
-                        projectButton="Google"
-                    />
+                    {getProjectsItems(projects)}
                 </div>
             </div>
             <CarouselInfinite />
