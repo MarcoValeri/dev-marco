@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { runInNewContext } = require('vm');
 
 exports.adminDashboard = (req, res, next) => {
 
@@ -21,7 +20,7 @@ exports.adminReadProjectsApi = (req, res, next) => {
      //     console.log(`Project ID: ${project.projectId}`);
      // })
 
-     res.render('read-projects-api', {
+     res.render('admin-read-projects-api', {
          pageTitle: 'Admin Projects API',
          projectsApi: projectsData
      });
@@ -36,8 +35,18 @@ exports.adminWriteProjectsApi = (req, res, next) => {
     //  let newProjectJsonData = 'Hello Node';
     //  fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
 
+    console.log(req.body);
+
      res.render('admin-write-projects-api', {
         pageTitle: 'Admin Projects API'
      });
+
+}
+
+exports.adminFormProjectsApi = (req, res, next) => {
+
+    res.render('admin-form-projects-api', {
+        pageTitle: 'Admin Form Projects API'
+    });
 
 }
