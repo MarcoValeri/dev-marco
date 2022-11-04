@@ -1,3 +1,4 @@
+const { json } = require('body-parser');
 const fs = require('fs');
 
 exports.adminDashboard = (req, res, next) => {
@@ -16,9 +17,9 @@ exports.adminReadProjectsApi = (req, res, next) => {
      let projectsJsonData = fs.readFileSync('./api/projects.json');
      let projectsData = JSON.parse(projectsJsonData);
 
-     // projectsData.projects.forEach(project => {
-     //     console.log(`Project ID: ${project.projectId}`);
-     // })
+    //  projectsData.projects.forEach(project => {
+    //      console.log(`Project ID: ${project.projectId}`);
+    //  })
 
      res.render('admin-read-projects-api', {
          pageTitle: 'Admin Projects API',
@@ -32,10 +33,10 @@ exports.adminWriteProjectsApi = (req, res, next) => {
     /**
      * Write JSON API file
      */
-    //  let newProjectJsonData = 'Hello Node';
-    //  fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
+     let newProjectJsonData = JSON.parse(req.body.projectsApi);
+     fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
 
-    console.log(req.body);
+    console.log(req.body.projectsApi);
 
      res.render('admin-write-projects-api', {
         pageTitle: 'Admin Projects API'
