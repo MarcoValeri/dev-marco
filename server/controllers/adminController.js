@@ -1,5 +1,7 @@
-const { json } = require('body-parser');
 const fs = require('fs');
+
+// Models
+const Project = require('../models/Project');
 
 exports.adminDashboard = (req, res, next) => {
 
@@ -33,10 +35,13 @@ exports.adminWriteProjectsApi = (req, res, next) => {
     /**
      * Write JSON API file
      */
-     let newProjectJsonData = JSON.parse(req.body.projectsApi);
-     fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
+    //  let newProjectJsonData = JSON.parse(req.body.projectsApi);
+    //  fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
 
-    console.log(req.body.projectsApi);
+    const project = new Project(req.body.projectsApi, './api/projects.json');
+    project.save();
+
+    // console.log(req.body.projectsApi);
 
      res.render('admin-write-projects-api', {
         pageTitle: 'Admin Projects API'
