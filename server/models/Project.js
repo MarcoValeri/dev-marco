@@ -2,16 +2,18 @@ const fs = require('fs');
 
 module.exports = class Project {
 
-    constructor(projectApi, filePath) {
-        this.projectApi = JSON.parse(projectApi);
-        // this.projectApi = projectApi;
+    constructor(filePath) {
         this.filePath = filePath;
     }
 
-    save() {
-        // let newProjectJsonData = JSON.parse(this.projectApi);
-        // fs.writeFileSync(this.filePath, JSON.stringify(newProjectJsonData));
-        fs.writeFileSync(this.filePath, JSON.stringify(this.projectApi));
+    read() {
+        let projectsJsonData = fs.readFileSync(this.filePath);
+        return JSON.parse(projectsJsonData);
+    }
+
+    save(projectApi) {
+        let projectApiJson = JSON.parse(projectApi);
+        fs.writeFileSync(this.filePath, JSON.stringify(projectApiJson));
     }
 
 }

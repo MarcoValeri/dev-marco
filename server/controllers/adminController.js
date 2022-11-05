@@ -16,16 +16,11 @@ exports.adminReadProjectsApi = (req, res, next) => {
     /**
      * Read JSON API file
      */
-     let projectsJsonData = fs.readFileSync('./api/projects.json');
-     let projectsData = JSON.parse(projectsJsonData);
-
-    //  projectsData.projects.forEach(project => {
-    //      console.log(`Project ID: ${project.projectId}`);
-    //  })
+    const project = new Project('./api/projects.json');
 
      res.render('admin-read-projects-api', {
          pageTitle: 'Admin Projects API',
-         projectsApi: projectsData
+         projectsApi: project.read()
      });
 
 }
@@ -35,13 +30,8 @@ exports.adminWriteProjectsApi = (req, res, next) => {
     /**
      * Write JSON API file
      */
-    //  let newProjectJsonData = JSON.parse(req.body.projectsApi);
-    //  fs.writeFileSync('./api/projects.json', JSON.stringify(newProjectJsonData));
-
-    const project = new Project(req.body.projectsApi, './api/projects.json');
-    project.save();
-
-    // console.log(req.body.projectsApi);
+    const project = new Project('./api/projects.json');
+    project.save(req.body.projectsApi);
 
      res.render('admin-write-projects-api', {
         pageTitle: 'Admin Projects API'
