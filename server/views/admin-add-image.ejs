@@ -6,7 +6,11 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin Write Projects API</h1>
+        <h1>Admin Add Image</h1>
         <%- include('./includes/navigation.ejs'); %>
+        <form action="/admin/upload" enctype="multipart/form-data" method="POST">
+            <input type="file" name="image">
+            <input type="submit" value="Upload">
+        </form>
     </body>
 </html>

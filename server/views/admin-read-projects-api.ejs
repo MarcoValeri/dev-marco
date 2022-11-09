@@ -7,12 +7,7 @@
     </head>
     <body>
         <h1>Admin Read Projects API</h1>
-        <ul>
-            <li><a href="/admin/dashboard">Admin Dashboard</a></li>
-            <li><a href="/admin/read-projects-api">Admin Read Projects API</a></li>
-            <!-- <li><a href="/admin/write-projects-api">Admin Write Projects API</a></li> -->
-            <li><a href="/admin/form-projects-api">Admin Form Projects API</a></li>
-        </ul>
+        <%- include('./includes/navigation.ejs'); %>
         <h2>Projects API data</h2>
         <% projectsApi.projects.forEach(project => { %>
             <p>Project ID: <%= project.projectId %></p>

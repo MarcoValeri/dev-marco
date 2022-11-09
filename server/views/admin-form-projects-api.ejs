@@ -7,11 +7,7 @@
     </head>
     <body>
         <h1>Admin Form Projects API</h1>
-        <ul>
-            <li><a href="/admin/dashboard">Admin Dashboard</a></li>
-            <li><a href="/admin/read-projects-api">Admin Read Projects API</a></li>
-            <li><a href="/admin/form-projects-api">Admin Form Projects API</a></li>
-        </ul>
+        <%- include('./includes/navigation.ejs'); %>
         <form action="/admin/write-projects-api" method="POST">
             <label for="projectsApi">Projects API</label>
             <br />

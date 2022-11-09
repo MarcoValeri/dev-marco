@@ -46,3 +46,25 @@ exports.adminFormProjectsApi = (req, res, next) => {
     });
 
 }
+
+exports.adminAddImage = (req, res, next) => {
+
+    console.log(req.files);
+
+    res.render('admin-add-image', {
+        pageTitle: 'Admin Add Image'
+    });
+
+}
+
+exports.adminUploadImage = (req, res, next) => {
+
+    const { image } = req.files;
+
+    if (!image) return res.sendStatus(400);
+
+    image.mv('C:/Users/marco/Documents/dev-marco/server' + '/upload/' + image.name);
+
+    res.sendStatus(200);
+
+}
