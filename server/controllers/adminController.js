@@ -1,4 +1,5 @@
-const fs = require('fs');
+const path = require('path');
+const pathFrontEnd = path.join(__dirname, '../../', 'dev-marco/public/images/');
 
 // Models
 const Project = require('../models/Project');
@@ -63,7 +64,7 @@ exports.adminUploadImage = (req, res, next) => {
 
     if (!image) return res.sendStatus(400);
 
-    image.mv('C:/Users/marco/Documents/dev-marco/server' + '/upload/' + image.name);
+    image.mv(pathFrontEnd + image.name);
 
     res.sendStatus(200);
 
