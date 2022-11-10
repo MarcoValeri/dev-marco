@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Routes
 const adminRoutes = require('./routes/adminRoutes');
 
+// Static Files
+app.use(express.static('public'));
+app.use('/images', express.static('images'));
+
 // Views
 app.set('view engine', 'ejs');
 app.set('views', 'views');

@@ -1,5 +1,7 @@
 const path = require('path');
-const pathFrontEnd = path.join(__dirname, '../../', 'dev-marco/public/images/');
+const pathBackEnd = path.join(__dirname, '../', '/public/images/');
+
+console.log(`path: ${pathBackEnd}`);
 
 // Models
 const Project = require('../models/Project');
@@ -50,8 +52,6 @@ exports.adminFormProjectsApi = (req, res, next) => {
 
 exports.adminAddImage = (req, res, next) => {
 
-    console.log(req.files);
-
     res.render('admin-add-image', {
         pageTitle: 'Admin Add Image'
     });
@@ -64,8 +64,16 @@ exports.adminUploadImage = (req, res, next) => {
 
     if (!image) return res.sendStatus(400);
 
-    image.mv(pathFrontEnd + image.name);
+    image.mv(pathBackEnd + image.name);
 
     res.sendStatus(200);
+
+}
+
+exports.adminListImages = (req, res, next) => {
+
+    res.render('admin-list-images', {
+        pageTitle: 'Admin List Images'
+    });
 
 }

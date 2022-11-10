@@ -1,8 +1,8 @@
 @import '../../App.scss';
 
 .project-card {
-    width: 40rem;
-    height: 30rem;
+    width: 60rem;
+    height: 35rem;
     overflow: hidden;
     margin: 0 2rem 5rem 2rem;
 
@@ -67,6 +67,7 @@
     }
 
     &__container-project-btn {
+
         @include respond(sm) {
             margin-bottom: 2rem;
         }

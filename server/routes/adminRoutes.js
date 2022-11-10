@@ -15,6 +15,8 @@ router.use(fileUpload());
 router.use('/admin/add-image', adminController.adminAddImage);
 router.post('/admin/upload', adminController.adminUploadImage);
 
+router.use('/admin/list-images', adminController.adminListImages);
+
 router.use('/admin/dashboard', adminController.adminDashboard);
 
 
