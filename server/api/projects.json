@@ -2,9 +2,9 @@
     "projects": [
         {
             "projectId": 5,
-            "projectImage": "https://www.devmarco.com/images/quickbook.jpg",
+            "projectImage": "http://localhost:8000/images/moving-company.webp",
             "projectTitle": "Brandimarte",
-            "projectDescription": "Moving Company made with Symfony",
+            "projectDescription": "Website for Moving Company made with Symfony",
             "showRepository": true,
             "projectRepository": "https://github.com/MarcoValeri/traslochi_brandimarte",
             "projectUrl": "https://www.brandimarte.info/",
@@ -12,7 +12,7 @@
         },
         {
             "projectId": 4,
-            "projectImage": "https://www.devmarco.com/images/quickbook.jpg",
+            "projectImage": "http://localhost:8000/images/london-eye.webp",
             "projectTitle": "ViaggIn",
             "projectDescription": "Travel Magazine made with WordPress",
             "showRepository": true,
@@ -22,7 +22,7 @@
         },
         {
             "projectId": 3,
-            "projectImage": "https://www.devmarco.com/images/quickbook.jpg",
+            "projectImage": "http://localhost:8000/images/typewriter.webp",
             "projectTitle": "Words Counter",
             "projectDescription": "Words Counter made with React",
             "showRepository": true,
