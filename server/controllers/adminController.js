@@ -1,8 +1,6 @@
 const path = require('path');
 const pathBackEnd = path.join(__dirname, '../', '/public/images/');
 
-console.log(`path: ${pathBackEnd}`);
-
 // Models
 const Project = require('../models/Project');
 

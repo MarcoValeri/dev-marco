@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import CarouselInfinite from '../../components/carousel-infinite-skills/carousel-infinite-skills';
+import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
 import TitleElastic from '../../components/title-elastic/title-elastic';
@@ -60,6 +61,7 @@ const Portfolio = () => {
                 </div>
             </div>
             <CarouselInfinite />
+            <Footer />
         </>
     )
 
