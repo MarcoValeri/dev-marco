@@ -36,6 +36,7 @@ const Portfolio = () => {
             getProjects.forEach((project, index) => {
                 output.push(
                     <ProjectCard
+                        key={index}
                         projectImage={project.projectImage}
                         projectTitle={project.projectTitle}
                         projectDescription={project.projectDescription}

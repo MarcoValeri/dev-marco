@@ -27,7 +27,7 @@ const Navigation = () => {
                 <ul className="nav__menu">
                     <li className="nav__menu-item"><Link to='/' className={`link-no-style body-3 link-effect-load ${highlightTheLink('/')}`} rel="noopener noreferrer">Home</Link></li>
                     <li className="nav__menu-item"><Link to='/portfolio' className={`link-no-style body-3 link-effect-load ${highlightTheLink('/portfolio')}`} rel="noopener noreferrer">Portfolio</Link></li>
-                    <li className="nav__menu-item"><Link to='/' className={`link-no-style body-3 link-effect-load ${highlightTheLink('/about-me')}`} rel="noopener noreferrer">About Me</Link></li>
+                    <li className="nav__menu-item"><Link to='/about-me' className={`link-no-style body-3 link-effect-load ${highlightTheLink('/about-me')}`} rel="noopener noreferrer">About Me</Link></li>
                     <li className="nav__menu-item"><Link to='/' className={`link-no-style body-3 link-effect-load ${highlightTheLink('/contact')}`} rel="noopener noreferrer">Contact</Link></li>
                 </ul>
             </div>

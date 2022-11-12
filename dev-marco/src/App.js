@@ -1,7 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 
+import AboutMe from './pages/about-me/about-me';
 import Home from './pages/home/home';
 import Portfolio from './pages/portfolio/portfolio';
+import ScrollToTop from './components/scroll-top/scroll-top';
 
 import './App.scss';
 
@@ -11,10 +13,13 @@ function App() {
 
   return (
     <>
-        <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/portfolio' element={<Portfolio />} />
+              <Route path='/about-me' element={<AboutMe />} />
+          </Routes>
+        </ScrollToTop>
     </>
   );
 }

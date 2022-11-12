@@ -35,6 +35,7 @@ const PortfolioPreview = () => {
                 if (index < 4) {
                     output.push(
                         <ProjectCard
+                            key={index}
                             projectImage={project.projectImage}
                             projectTitle={project.projectTitle}
                             projectDescription={project.projectDescription}
