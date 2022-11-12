@@ -1,0 +1,11 @@
+.portfolio-preview {
+    margin-bottom: 5rem;
+
+    &__container-projects {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+}

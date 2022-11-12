@@ -17,6 +17,15 @@
         padding: 2rem;
     }
 
+    &__social-icon {
+        transition: transform .5s;
+        
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .5s;
+        }
+    }
+
     &__credits {
         color: $white;
         font-family: 'Fuzzy Bubbles', cursive;

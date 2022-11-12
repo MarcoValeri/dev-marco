@@ -14,21 +14,21 @@ const Footer = () => {
             <div className="footer__container-social">
                 <div className="footer__container-linkedin">
                     <a href="https://www.linkedin.com/in/valeri-marco/" target="_blank" rel="noreferrer noopener">
-                        <IconContext.Provider value={{ className: 'icon icon__linkedin' }}>
+                        <IconContext.Provider value={{ className: 'footer__social-icon icon icon__linkedin' }}>
                             <FaLinkedin />
                         </IconContext.Provider>
                     </a>
                 </div>
                 <div className="footer__container-github">
                     <a href="https://github.com/MarcoValeri" target="_blank" rel="noreferrer noopener">
-                        <IconContext.Provider value={{ className: 'icon icon__github--white' }}>
+                        <IconContext.Provider value={{ className: 'footer__social-icon icon icon__github--white' }}>
                             <FaGithub />
                         </IconContext.Provider>
                     </a>
                 </div>
                 <div className="footer__container-twitter">
                     <a href="https://twitter.com/MarkoValeri" target="_blank" rel="noreferrer noopener">
-                        <IconContext.Provider value={{ className: 'icon icon__twitter' }}>
+                        <IconContext.Provider value={{ className: 'footer__social-icon icon icon__twitter' }}>
                             <FaTwitterSquare />
                         </IconContext.Provider>
                     </a>
