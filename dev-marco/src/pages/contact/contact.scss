@@ -1,3 +1,10 @@
+@import '../../App.scss';
+
 .contact {
-    border: 1px solid #f00;
+    width: 80%;
+    margin: 0 auto 5rem auto;
+
+    @include respond(md) {
+        width: 90%;
+    }
 }

@@ -1,3 +1,50 @@
+// Buttons
+.button {
+    font-size: 1.6rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-family: 'Fuzzy Bubbles', cursive;
+    
+    &__circle {
+        font-weight: 600;
+        align-items: center;
+        background-color: $white;
+        padding: 1.5rem 4rem;
+        border-radius: 2.7rem;
+        color: $blue-input;
+        border: 2px solid $blue-input;
+
+        &:hover {
+            color: $green-input;
+            border: 2px solid $green-input;
+            transition: all .5s;
+        }
+    }
+
+    &__arrow-next {
+        position: relative;
+        padding: 1.5rem 5rem 1.5rem 4rem;
+        align-items: right;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            right: 22px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: url('http://localhost:8000/images/arrow-right-blue.svg') no-repeat top right;
+            transition: all .5s;
+        }
+
+        &:hover::after {
+            right: 15px;
+            background: url('http://localhost:8000/images/arrow-right-green.svg') no-repeat top right;
+        }
+    }
+}
+
 // Font
 .h1 {
     font-size: 5.4rem;

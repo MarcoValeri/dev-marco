@@ -8,7 +8,7 @@ import { SiMysql, SiJavascript } from 'react-icons/si';
 // Import style file
 import './header.scss';
 
-const Header = ({ subTitle }) => {
+const Header = ({ subTitle = "Full Stack Developer" }) => {
     return (
         <header className="header">
             <Navigation />

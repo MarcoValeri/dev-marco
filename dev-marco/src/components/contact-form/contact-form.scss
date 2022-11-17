@@ -1,0 +1,82 @@
+@import '../../App.scss';
+
+.contact-form {
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "contact-form__container-name contact-form__container-email"
+        "contact-form__container-message contact-form__container-message"
+        "contact-form__container-btn contact-form__container-btn";
+
+        @include respond(md) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "contact-form__container-name"
+            "contact-form__container-email"
+            "contact-form__container-message"
+            "contact-form__container-btn";
+        }
+    }
+
+    &__container-name {
+        grid-area: contact-form__container-name;
+        margin-bottom: 2rem;
+    }
+
+    &__container-email {
+        grid-area: contact-form__container-email;
+        margin-bottom: 2rem;
+    }
+
+    &__container-message {
+        grid-area: contact-form__container-message;
+        margin-bottom: 2rem;
+    }
+
+    &__container-btn {
+        grid-area: contact-form__container-btn;
+    }
+
+    &__input-base {
+        font-size: 1.6rem;
+        margin: 1rem;
+        outline: none;
+        border: 2px solid $blue-input;
+        padding: 1rem;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        font-family: 'Fuzzy Bubbles', cursive;
+
+        &:focus {
+            border: 2px solid $green-input; 
+        }
+    }
+
+    &__input-text {
+        width: 80%;
+
+        @include respond(md) {
+            width: 90%;
+        }
+
+        @include respond(sm) {
+            width: 80%;
+        }
+    }
+
+    &__input-textarea {
+        width: 90%;
+        height: auto;
+        min-height: 30vh;
+
+        @include respond(sm) {
+            width: 80%;
+        }
+    }
+
+    &__input-submit {
+        margin: 1rem;
+    }
+}

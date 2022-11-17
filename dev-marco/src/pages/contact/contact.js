@@ -7,8 +7,8 @@ import './contact.scss';
 const Contact = () => {
     return (
         <>
-            <Header />
-            <div className="contant">
+            <Header subTitle="Contact" />
+            <div className="contact">
                 <ContactForm />
             </div>
             <Footer />
