@@ -3,6 +3,7 @@ const express = require('express');
 
 // Controllers
 const adminController = require('../controllers/adminController');
+const contactController = require('../controllers/contactController');
 
 const router = express.Router();
 
@@ -16,6 +17,8 @@ router.use('/admin/add-image', adminController.adminAddImage);
 router.post('/admin/upload', adminController.adminUploadImage);
 
 router.use('/admin/list-images', adminController.adminListImages);
+
+router.post('/contact', contactController.sendMessage);
 
 router.use('/admin/dashboard', adminController.adminDashboard);
 

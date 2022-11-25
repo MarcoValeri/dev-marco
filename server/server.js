@@ -2,7 +2,15 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const express = require('express');
 
+const cors = require('cors');
+
 const app = express();
+
+// Parse incoming requests with JSON
+app.use(express.json());
+
+// Move data from back-end to front-end
+app.use(cors());
 
 // BodyParse
 app.use(bodyParser.urlencoded({extended: true}));
