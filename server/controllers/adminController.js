@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const pathBackEnd = path.join(__dirname, '../', '/public/images/');
 
@@ -69,6 +70,19 @@ exports.adminUploadImage = (req, res, next) => {
 }
 
 exports.adminListImages = (req, res, next) => {
+
+    fs.readdir(pathBackEnd, (err, files) => {
+
+        if (err) {
+            return console.log(`Unable to scan directory: ${err}`);
+        }
+
+        files.forEach(file => {
+            console.log(file);
+            console.log(`http://localhost:8000/images/${file}`);
+        })
+
+    })
 
     res.render('admin-list-images', {
         pageTitle: 'Admin List Images'
