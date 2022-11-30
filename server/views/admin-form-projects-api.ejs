@@ -8,6 +8,33 @@
     <body>
         <h1>Admin Form Projects API</h1>
         <%- include('./includes/navigation.ejs'); %>
+        <h2>Project API example</h2>
+        <pre>
+            {
+                "projects": [
+                    {
+                        "projectId": 5,
+                        "projectImage": "http://localhost:8000/images/moving-company.webp",
+                        "projectTitle": "Brandimarte",
+                        "projectDescription": "Website for Moving Company made with Symfony",
+                        "showRepository": true,
+                        "projectRepository": "https://github.com/MarcoValeri/traslochi_brandimarte",
+                        "projectUrl": "https://www.brandimarte.info/",
+                        "projectButton": "Check it out"
+                    },
+                    {
+                        "projectId": 4,
+                        "projectImage": "http://localhost:8000/images/london-eye.webp",
+                        "projectTitle": "ViaggIn",
+                        "projectDescription": "Travel Magazine made with WordPress",
+                        "showRepository": true,
+                        "projectRepository": "https://github.com/MarcoValeri/viaggin",
+                        "projectUrl": "https://viaggin.com/",
+                        "projectButton": "Check it out"
+                    }
+                ]
+            }
+        </pre>
         <form action="/admin/write-projects-api" method="POST">
             <label for="projectsApi">Projects API</label>
             <br />

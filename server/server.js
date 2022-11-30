@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
 const adminRoutes = require('./routes/adminRoutes');
+const contactRoutes = require('./routes/contactRoutes');
 
 // Static Files
 app.use(express.static('public'));
@@ -30,6 +31,7 @@ let projectData = fs.readFileSync('./api/projects.json');
 let project = JSON.parse(projectData);
 
 app.use(adminRoutes);
+app.use(contactRoutes);
 
 app.get('/api/projects', (req, res, next) => {
     res.json({project});
