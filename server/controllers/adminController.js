@@ -69,23 +69,33 @@ exports.adminUploadImage = (req, res, next) => {
 
 }
 
-exports.adminListImages = (req, res, next) => {
+exports.adminListImages = async (req, res, next) => {
 
-    fs.readdir(pathBackEnd, (err, files) => {
+    try {
+        /**
+         * Create an array where to store
+         * all images links
+         */
+        let getFileImages = [];
 
-        if (err) {
-            return console.log(`Unable to scan directory: ${err}`);
-        }
+        await fs.readdir(pathBackEnd, (err, files) => {
 
-        files.forEach(file => {
-            console.log(file);
-            console.log(`http://localhost:8000/images/${file}`);
+            if (err) {
+                return console.log(`Unable to scan directory: ${err}`);
+            }
+
+            files.forEach(file => {
+                getFileImages.push(`http://localhost:8000/images/${file}`);
+            })
+
+            res.render('admin-list-images', {
+                pageTitle: 'Admin List Images',
+                fileImages: getFileImages
+            });
+
         })
-
-    })
-
-    res.render('admin-list-images', {
-        pageTitle: 'Admin List Images'
-    });
+    } catch (err) {
+        console.error(`Error: ${err}`);
+    }
 
 }
