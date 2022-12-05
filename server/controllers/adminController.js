@@ -7,7 +7,7 @@ const Project = require('../models/Project');
 
 exports.adminDashboard = (req, res, next) => {
 
-    res.render('admin-dashboard', {
+    res.render('./admin/admin-dashboard', {
         pageTitle: 'Admin Dashboard'
     });
 
@@ -20,7 +20,7 @@ exports.adminReadProjectsApi = (req, res, next) => {
      */
     const project = new Project('./api/projects.json');
 
-     res.render('admin-read-projects-api', {
+     res.render('./admin/admin-read-projects-api', {
          pageTitle: 'Admin Projects API',
          projectsApi: project.read()
      });
@@ -35,7 +35,7 @@ exports.adminWriteProjectsApi = (req, res, next) => {
     const project = new Project('./api/projects.json');
     project.save(req.body.projectsApi);
 
-     res.render('admin-write-projects-api', {
+     res.render('./admin/admin-write-projects-api', {
         pageTitle: 'Admin Projects API'
      });
 
@@ -43,7 +43,7 @@ exports.adminWriteProjectsApi = (req, res, next) => {
 
 exports.adminFormProjectsApi = (req, res, next) => {
 
-    res.render('admin-form-projects-api', {
+    res.render('./admin/admin-form-projects-api', {
         pageTitle: 'Admin Form Projects API'
     });
 
@@ -51,7 +51,7 @@ exports.adminFormProjectsApi = (req, res, next) => {
 
 exports.adminAddImage = (req, res, next) => {
 
-    res.render('admin-add-image', {
+    res.render('./admin/admin-add-image', {
         pageTitle: 'Admin Add Image'
     });
 
@@ -88,7 +88,7 @@ exports.adminListImages = async (req, res, next) => {
                 getFileImages.push(`http://localhost:8000/images/${file}`);
             })
 
-            res.render('admin-list-images', {
+            res.render('./admin/admin-list-images', {
                 pageTitle: 'Admin List Images',
                 fileImages: getFileImages
             });
