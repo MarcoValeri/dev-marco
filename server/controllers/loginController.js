@@ -12,9 +12,6 @@ exports.loginPage = (req, res, next) => {
 }
 
 exports.loginValidator = (req, res, next) => {
-    // console.log(`Login data:`);
-    // console.log(req.body);
-    // console.log(`Email: ${req.body.email}`);
 
     /**
      * Save user inputs by login form into

@@ -24,28 +24,21 @@ module.exports = class User {
         // Get all users
         const allValidUsers = this.getAllUsers();
 
-        for (const user in allValidUsers) {
-            console.log(user);
-            console.log(allValidUsers[user].email);
-            console.log(allValidUsers[user].password);
+        /**
+         * Create a boolean variable
+         * that determins if the
+         * user has been found (TRUE)
+         */
+        let doesUserExist = false;
 
+        for (const user in allValidUsers) {
             if (allValidUsers[user].email === email && allValidUsers[user].password === password) {
-                console.log(`TRUE`);
-            } else {
-                console.log(`FALSE`);
+                doesUserExist = true;
             }
         }
 
-        // for (const user in allValidUsers) {
-            // console.log(`ID: ${user}`);
-            // for (const userData in user) {
-            //     console.log(`Email: ${userData.email}`);
-            //     console.log(`Password: ${userData.password}`);
-            // }
-        // }
-
         // return allValidUsers;
-        return typeof allValidUsers;
+        return doesUserExist;
 
     }
 
