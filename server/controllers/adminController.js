@@ -5,11 +5,23 @@ const pathBackEnd = path.join(__dirname, '../', '/public/images/');
 // Models
 const Project = require('../models/Project');
 
+// Session
+let session;
+
 exports.adminDashboard = (req, res, next) => {
 
-    res.render('./admin/admin-dashboard', {
-        pageTitle: 'Admin Dashboard'
-    });
+    session = req.session;
+    session.userid = 'Marco';
+    console.log(req.session);
+
+    if (session.userid === 'Marco') {
+        res.render('./admin/admin-dashboard', {
+            pageTitle: 'Admin Dashboard'
+        });
+    } else {
+        res.redirect('/');
+    }
+
 
 };
 

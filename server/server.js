@@ -1,10 +1,25 @@
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const fs = require('fs');
 const express = require('express');
+const sessions = require('express-session');
 
 const cors = require('cors');
 
 const app = express();
+
+// Session
+const oneDay = 1000 * 60 * 60 * 24;
+
+app.use(sessions({
+    secret: 'thisismysecretkey',
+    saveUninitialized: true,
+    cookie: { maxAge: oneDay },
+    resave: false
+}));
+
+// Cookie parser middleware
+app.use(cookieParser());
 
 // Parse incoming requests with JSON
 app.use(express.json());
