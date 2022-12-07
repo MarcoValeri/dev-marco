@@ -5,16 +5,9 @@ const pathBackEnd = path.join(__dirname, '../', '/public/images/');
 // Models
 const Project = require('../models/Project');
 
-// Session
-let session;
-
 exports.adminDashboard = (req, res, next) => {
 
-    session = req.session;
-    session.userid = 'Marco';
-    console.log(req.session);
-
-    if (session.userid === 'Marco') {
+    if (req.session.adminUser) {
         res.render('./admin/admin-dashboard', {
             pageTitle: 'Admin Dashboard'
         });
@@ -27,87 +20,117 @@ exports.adminDashboard = (req, res, next) => {
 
 exports.adminReadProjectsApi = (req, res, next) => {
 
-    /**
-     * Read JSON API file
-     */
-    const project = new Project('./api/projects.json');
 
-     res.render('./admin/admin-read-projects-api', {
-         pageTitle: 'Admin Projects API',
-         projectsApi: project.read()
-     });
+    if (req.session.adminUser) {
+        /**
+         * Read JSON API file
+         */
+        const project = new Project('./api/projects.json');
+
+         res.render('./admin/admin-read-projects-api', {
+             pageTitle: 'Admin Projects API',
+             projectsApi: project.read()
+         });
+    } else {
+        res.redirect('/');
+    }
 
 }
 
 exports.adminWriteProjectsApi = (req, res, next) => {
 
-    /**
-     * Write JSON API file
-     */
-    const project = new Project('./api/projects.json');
-    project.save(req.body.projectsApi);
+    if (req.session.adminUser) {
+        /**
+         * Write JSON API file
+         */
+        const project = new Project('./api/projects.json');
+        project.save(req.body.projectsApi);
 
-     res.render('./admin/admin-write-projects-api', {
-        pageTitle: 'Admin Projects API'
-     });
+         res.render('./admin/admin-write-projects-api', {
+            pageTitle: 'Admin Projects API'
+         });
+    } else {
+        res.redirect('/');
+    }
+
 
 }
 
 exports.adminFormProjectsApi = (req, res, next) => {
 
-    res.render('./admin/admin-form-projects-api', {
-        pageTitle: 'Admin Form Projects API'
-    });
+    if (req.session.adminUser) {
+        res.render('./admin/admin-form-projects-api', {
+            pageTitle: 'Admin Form Projects API'
+        });
+    } else {
+        res.redirect('/');
+    }
+
 
 }
 
 exports.adminAddImage = (req, res, next) => {
 
-    res.render('./admin/admin-add-image', {
-        pageTitle: 'Admin Add Image'
-    });
+    if (req.session.adminUser) {
+        res.render('./admin/admin-add-image', {
+            pageTitle: 'Admin Add Image'
+        });
+    } else {
+        res.redirect('/');
+    }
+
 
 }
 
 exports.adminUploadImage = (req, res, next) => {
 
-    const { image } = req.files;
+    if (req.session.adminUser) {
+        const { image } = req.files;
 
-    if (!image) return res.sendStatus(400);
+        if (!image) return res.sendStatus(400);
 
-    image.mv(pathBackEnd + image.name);
+        image.mv(pathBackEnd + image.name);
 
-    res.sendStatus(200);
+        res.sendStatus(200);
+    } else {
+        res.redirect('/');
+    }
+
 
 }
 
 exports.adminListImages = async (req, res, next) => {
 
-    try {
-        /**
-         * Create an array where to store
-         * all images links
-         */
-        let getFileImages = [];
+    if (req.session.adminUser) {
+        try {
+            /**
+             * Create an array where to store
+             * all images links
+             */
+            let getFileImages = [];
 
-        await fs.readdir(pathBackEnd, (err, files) => {
+            await fs.readdir(pathBackEnd, (err, files) => {
 
-            if (err) {
-                return console.log(`Unable to scan directory: ${err}`);
-            }
+                if (err) {
+                    return console.log(`Unable to scan directory: ${err}`);
+                }
 
-            files.forEach(file => {
-                getFileImages.push(`http://localhost:8000/images/${file}`);
+                files.forEach(file => {
+                    getFileImages.push(`http://localhost:8000/images/${file}`);
+                })
+
+                res.render('./admin/admin-list-images', {
+                    pageTitle: 'Admin List Images',
+                    fileImages: getFileImages
+                });
+
             })
-
-            res.render('./admin/admin-list-images', {
-                pageTitle: 'Admin List Images',
-                fileImages: getFileImages
-            });
-
-        })
-    } catch (err) {
-        console.error(`Error: ${err}`);
+        } catch (err) {
+            console.error(`Error: ${err}`);
+        }
+    } else {
+        res.redirect('/');
     }
+
 
 }

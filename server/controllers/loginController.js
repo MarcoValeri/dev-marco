@@ -22,7 +22,6 @@ exports.loginValidator = (req, res, next) => {
 
     const userLogin = new User;
     const validUsers = userLogin.isValidUser(userInputEmail, userInputPassword);
-    console.log(validUsers);
 
     res.render('login', {
         pageTitle: 'Login Page'
@@ -30,6 +29,9 @@ exports.loginValidator = (req, res, next) => {
 }
 
 exports.homePage = (req, res, next) => {
+
+    req.session.adminUser = false;
+
     res.render('login', {
         pageTitle: 'Login Page'
     });
