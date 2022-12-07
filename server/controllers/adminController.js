@@ -12,7 +12,7 @@ exports.adminDashboard = (req, res, next) => {
             pageTitle: 'Admin Dashboard'
         });
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 
@@ -32,7 +32,7 @@ exports.adminReadProjectsApi = (req, res, next) => {
              projectsApi: project.read()
          });
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 }
@@ -50,7 +50,7 @@ exports.adminWriteProjectsApi = (req, res, next) => {
             pageTitle: 'Admin Projects API'
          });
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 
@@ -63,7 +63,7 @@ exports.adminFormProjectsApi = (req, res, next) => {
             pageTitle: 'Admin Form Projects API'
         });
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 
@@ -76,7 +76,7 @@ exports.adminAddImage = (req, res, next) => {
             pageTitle: 'Admin Add Image'
         });
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 
@@ -93,7 +93,7 @@ exports.adminUploadImage = (req, res, next) => {
 
         res.sendStatus(200);
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 
@@ -129,7 +129,7 @@ exports.adminListImages = async (req, res, next) => {
             console.error(`Error: ${err}`);
         }
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 
 

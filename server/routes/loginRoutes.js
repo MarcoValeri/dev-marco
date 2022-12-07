@@ -8,8 +8,8 @@ const loginController = require('../controllers/loginController');
 
 router.post('/login-validation', loginController.loginValidator);
 
-router.use('/', loginController.homePage);
-
 router.use('/login', loginController.loginPage);
+
+router.use('/', loginController.homePage);
 
 module.exports = router;

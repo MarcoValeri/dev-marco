@@ -3,12 +3,20 @@ const User = require('../models/User');
 
 exports.loginPage = (req, res, next) => {
 
-    const email = req.body.email;
-    console.log(`Email: ${email}`);
+    /**
+     * Set up session adminUser
+     * to false
+     */
+    req.session.adminUser = false;
+
+    if (!req.session.adminUser) {
+        req.session.adminUser = false;
+    }
 
     res.render('login', {
         pageTitle: 'Login Page'
     });
+
 }
 
 exports.loginValidator = (req, res, next) => {
@@ -23,16 +31,21 @@ exports.loginValidator = (req, res, next) => {
     const userLogin = new User;
     const validUsers = userLogin.isValidUser(userInputEmail, userInputPassword);
 
-    res.render('login', {
-        pageTitle: 'Login Page'
-    });
+    if (validUsers) {
+        req.session.adminUser = true;
+        res.redirect('/admin/dashboard');
+    } else {
+        res.render('login', {
+            pageTitle: 'Login Page'
+        });
+    }
+
 }
 
 exports.homePage = (req, res, next) => {
 
-    req.session.adminUser = false;
-
-    res.render('login', {
-        pageTitle: 'Login Page'
+    res.render('home', {
+        pageTitle: 'Home'
     });
+
 }
