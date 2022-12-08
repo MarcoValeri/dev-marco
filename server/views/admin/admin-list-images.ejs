@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./../includes/head.ejs'); %>
         <title><%= pageTitle %></title>
     </head>
     <body>
@@ -11,7 +7,6 @@
         <div>
             <% for (let i = 0; i < fileImages.length; i++) { %>
                 <p><%= fileImages[i]; %></p>
-                <!-- <img src="<%= fileImages[i]; %>" alt=""> -->
             <% } %>
         </div>
     </body>

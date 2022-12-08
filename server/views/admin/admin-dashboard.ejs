@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./../includes/head.ejs'); %>
         <title><%= pageTitle %></title>
     </head>
     <body>
         <h1>Admin Dashboard</h1>
         <%- include('../includes/navigation.ejs'); %>
+        <main class="main">
+            <div class="main__sidebar">
+                <%- include('../includes/menu.ejs'); %>
+            </div>
+            <div class="main__content"></div>
+        </main>
     </body>
 </html>
