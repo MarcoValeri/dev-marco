@@ -1,7 +1,6 @@
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 const sessions = require('express-session');
 
@@ -33,6 +32,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
 const adminRoutes = require('./routes/adminRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 
@@ -44,15 +44,9 @@ app.use('/images', express.static('images'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-let projectData = fs.readFileSync('./api/projects.json');
-let project = JSON.parse(projectData);
-
 app.use(adminRoutes);
+app.use(apiRoutes);
 app.use(contactRoutes);
 app.use(loginRoutes);
-
-app.get('/api/projects', (req, res, next) => {
-    res.json({project});
-})
 
 app.listen(8000);

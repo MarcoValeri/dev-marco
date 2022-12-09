@@ -2,7 +2,17 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin Write Projects API</h1>
-        <%- include('../includes/navigation.ejs'); %>
+        <main class="main">
+            <div class="main__container-title">
+                <h1 class="body-1">Admin Write Projects API</h1>
+            </div>
+            <div class="main__container-sidebar">
+                <%- include('../includes/menu.ejs'); %>
+            </div>
+            <div class="main__container-content">
+                <p class="body-3">Projects APIs have been uploaded</p>
+            </div>
+        </main>
+        <h1></h1>
     </body>
 </html>
