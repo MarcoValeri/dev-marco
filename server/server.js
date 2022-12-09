@@ -1,7 +1,8 @@
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const fs = require('fs');
 const express = require('express');
+const fs = require('fs');
+const path = require('path');
 const sessions = require('express-session');
 
 const cors = require('cors');
@@ -36,7 +37,7 @@ const contactRoutes = require('./routes/contactRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 
 // Static Files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static('images'));
 
 // Views
