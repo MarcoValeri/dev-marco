@@ -2,12 +2,18 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin List Images</h1>
-        <%- include('../includes/navigation.ejs'); %>
-        <div>
-            <% for (let i = 0; i < fileImages.length; i++) { %>
-                <p><%= fileImages[i]; %></p>
-            <% } %>
-        </div>
+        <main class="main">
+            <div class="main__container-title">
+                <h1 class="body-1">Admin List Images</h1>
+            </div>
+            <div class="main__container-sidebar">
+                <%- include('../includes/menu.ejs'); %>
+            </div>
+            <div class="main__container-content">
+                <% for (let i = 0; i < fileImages.length; i++) { %>
+                    <p class="body-3"><%= fileImages[i]; %></p>
+                <% } %>
+            </div>
+        </main>
     </body>
 </html>

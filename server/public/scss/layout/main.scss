@@ -1,11 +1,25 @@
 .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "main__container-title main__container-title"
+    "main__container-sidebar main__container-content";
 
-    &__sidebar {
-        border: 1px solid #f00;
+    &__container-title {
+        grid-area: main__container-title;
+        padding: 1rem;
     }
 
-    &__container {
-        border: 1px solid #00f;
+    &__container-sidebar {
+        grid-area: main__container-sidebar;
+        padding: 1rem;
+        border: 1px solid #000;
+    }
+
+    &__container-content {
+        grid-area: main__container-content;
+        padding: 1rem;
+        border: 1px solid #000;
     }
 
 }

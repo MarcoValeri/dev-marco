@@ -2,19 +2,26 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin Read Projects API</h1>
-        <%- include('../includes/navigation.ejs'); %>
-        <h2>Projects API data</h2>
-        <% projectsApi.projects.forEach(project => { %>
-            <p>Project ID: <%= project.projectId %></p>
-            <p>Project Image: <%= project.projectImage %></p>
-            <p>Project Title: <%= project.projectTitle %></p>
-            <p>Project Description: <%= project.projectDescription %></p>
-            <p>Project Show Repository: <%= project.showRepository %></p>
-            <p>Project Repository: <%= project.projectRepository %></p>
-            <p>Project URL: <%= project.projectUrl %></p>
-            <p>Project Button: <%= project.projectButton %></p>
-            <br />
-        <% }) %>
+        <main class="main">
+            <div class="main__container-title">
+                <h1 class="body-1">Admin Read Projects API</h1>
+            </div>
+            <div class="main__container-sidebar">
+                <%- include('../includes/menu.ejs'); %>
+            </div>
+            <div class="main__container-content">
+                <% projectsApi.projects.forEach(project => { %>
+                    <p class="body-3">Project ID: <%= project.projectId %></p>
+                    <p class="body-3">Project Image: <%= project.projectImage %></p>
+                    <p class="body-3">Project Title: <%= project.projectTitle %></p>
+                    <p class="body-3">Project Description: <%= project.projectDescription %></p>
+                    <p class="body-3">Project Show Repository: <%= project.showRepository %></p>
+                    <p class="body-3">Project Repository: <%= project.projectRepository %></p>
+                    <p class="body-3">Project URL: <%= project.projectUrl %></p>
+                    <p class="body-3">Project Button: <%= project.projectButton %></p>
+                    <br />
+                <% }) %>
+            </div>
+        </main>
     </body>
 </html>

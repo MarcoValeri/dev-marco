@@ -2,13 +2,16 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin Dashboard</h1>
-        <%- include('../includes/navigation.ejs'); %>
         <main class="main">
-            <div class="main__sidebar">
+            <div class="main__container-title">
+                <h1 class="body-1">Admin Dashboard</h1>
+            </div>
+            <div class="main__container-sidebar">
                 <%- include('../includes/menu.ejs'); %>
             </div>
-            <div class="main__content"></div>
+            <div class="main__container-content">
+                <h2 class="body-2">Manage the application by its admin area</h2>
+            </div>
         </main>
     </body>
 </html>

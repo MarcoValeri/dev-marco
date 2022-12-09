@@ -2,41 +2,49 @@
         <title><%= pageTitle %></title>
     </head>
     <body>
-        <h1>Admin Form Projects API</h1>
-        <%- include('../includes/navigation.ejs'); %>
-        <h2>Project API example</h2>
-        <pre>
-            {
-                "projects": [
+        <main class="main">
+            <div class="main__container-title">
+                <h1 class="body-1">Admin Form Projects API</h1>
+            </div>
+            <div class="main__container-sidebar">
+                <%- include('../includes/menu.ejs'); %>
+            </div>
+            <div class="main__container-content">
+                <h2>Project API example</h2>
+                <pre>
                     {
-                        "projectId": 5,
-                        "projectImage": "http://localhost:8000/images/moving-company.webp",
-                        "projectTitle": "Brandimarte",
-                        "projectDescription": "Website for Moving Company made with Symfony",
-                        "showRepository": true,
-                        "projectRepository": "https://github.com/MarcoValeri/traslochi_brandimarte",
-                        "projectUrl": "https://www.brandimarte.info/",
-                        "projectButton": "Check it out"
-                    },
-                    {
-                        "projectId": 4,
-                        "projectImage": "http://localhost:8000/images/london-eye.webp",
-                        "projectTitle": "ViaggIn",
-                        "projectDescription": "Travel Magazine made with WordPress",
-                        "showRepository": true,
-                        "projectRepository": "https://github.com/MarcoValeri/viaggin",
-                        "projectUrl": "https://viaggin.com/",
-                        "projectButton": "Check it out"
+                        "projects": [
+                            {
+                                "projectId": 5,
+                                "projectImage": "http://localhost:8000/images/moving-company.webp",
+                                "projectTitle": "Brandimarte",
+                                "projectDescription": "Website for Moving Company made with Symfony",
+                                "showRepository": true,
+                                "projectRepository": "https://github.com/MarcoValeri/traslochi_brandimarte",
+                                "projectUrl": "https://www.brandimarte.info/",
+                                "projectButton": "Check it out"
+                            },
+                            {
+                                "projectId": 4,
+                                "projectImage": "http://localhost:8000/images/london-eye.webp",
+                                "projectTitle": "ViaggIn",
+                                "projectDescription": "Travel Magazine made with WordPress",
+                                "showRepository": true,
+                                "projectRepository": "https://github.com/MarcoValeri/viaggin",
+                                "projectUrl": "https://viaggin.com/",
+                                "projectButton": "Check it out"
+                            }
+                        ]
                     }
-                ]
-            }
-        </pre>
-        <form action="/admin/write-projects-api" method="POST">
-            <label for="projectsApi">Projects API</label>
-            <br />
-            <textarea id="projectsApi" name="projectsApi" cols="30" rows="10"></textarea>
-            <br />
-            <input type="submit" value="submit" />
-        </form>
+                </pre>
+                <form action="/admin/write-projects-api" method="POST">
+                    <label for="projectsApi">Projects API</label>
+                    <br />
+                    <textarea id="projectsApi" name="projectsApi" cols="30" rows="10"></textarea>
+                    <br />
+                    <input type="submit" value="submit" />
+                </form>
+            </div>
+        </main>
     </body>
 </html>
