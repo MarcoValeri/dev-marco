@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const dotenv = require('dotenv');
 const express = require('express');
 const path = require('path');
 const sessions = require('express-session');
@@ -7,6 +8,9 @@ const sessions = require('express-session');
 const cors = require('cors');
 
 const app = express();
+
+// DotEnv Configuration
+dotenv.config();
 
 // Session
 const oneDay = 1000 * 60 * 60 * 24;
@@ -49,4 +53,4 @@ app.use(apiRoutes);
 app.use(contactRoutes);
 app.use(loginRoutes);
 
-app.listen(8000);
+app.listen(process.env.SERVER_PORT);
