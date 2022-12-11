@@ -17,6 +17,8 @@ router.post('/admin/upload', adminController.adminUploadImage);
 
 router.use('/admin/list-images', adminController.adminListImages);
 
+router.post('/admin/contact', adminController.adminContact);
+
 router.use('/admin/dashboard', adminController.adminDashboard);
 
 

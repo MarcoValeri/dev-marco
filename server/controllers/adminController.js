@@ -1,3 +1,4 @@
+const nodemailer = require('nodemailer');
 const path = require('path');
 const pathBackEnd = path.join(__dirname, '../', '/public/images/');
 
@@ -73,5 +74,48 @@ exports.adminListImages = (req, res, next) => {
     res.render('admin-list-images', {
         pageTitle: 'Admin List Images'
     });
+
+}
+
+exports.adminContact = (req, res, next) => {
+
+    // const contactEmail = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: 'info@marcovaleri.net',
+    //         pass: 'wjabtpkaeqcvgcvg',
+    //     },
+    // });
+
+    // contactEmail.verify((error) => {
+    //     if (error) {
+    //         console.log(error);
+    //     } else {
+    //         console.log(`Ready to Send`);
+    //     }
+    // });
+
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message;
+
+    console.log(`name: ${name}`);
+    console.log(`email: ${email}`);
+    console.log(`message: ${message}`);
+
+    // const mail = {
+    //     from: name,
+    //     to: 'info@marcovaleri.net',
+    //     subject: 'Contact Form Submission',
+    //     html: `<p>Test: ${message}</p>`,
+    // };
+
+    // contactEmail.sendMail(mail, (error) => {
+    //     if (error) {
+    //         res.json({ status: 'Error' });
+    //     } else {
+    //         res.json({ status: 'Message Sent' });
+    //     }
+    // });
 
 }
