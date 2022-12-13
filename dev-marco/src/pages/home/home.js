@@ -1,3 +1,4 @@
+import AboutMePreview from '../../components/about-me-preview/about-me-preview';
 import CarouselInfinite from '../../components/carousel-infinite-skills/carousel-infinite-skills';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
@@ -12,6 +13,7 @@ const Home = () => {
             <Header subTitle="Full Stack Developer" />
             <PortfolioPreview />
             <CarouselInfinite />
+            <AboutMePreview />
             <Footer />
         </>
     )

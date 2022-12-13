@@ -1,0 +1,24 @@
+@import '../../App.scss';
+
+.about-me-preview {
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin-bottom: 5rem;
+
+    &__container-content {
+        width: 60%;
+        margin: auto;
+        padding: 5rem;
+
+        @include respond(xl) {
+            width: 80%;
+        }
+
+        @include respond(md) {
+            padding: 2rem;
+        }
+
+        @include respond(sm) {
+            padding: 1rem;
+        }
+    }
+}

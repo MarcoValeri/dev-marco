@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import ButtonAnimated from '../button-animated/button-animated';
+import ButtonLarge from '../button-large/button-large';
 import ProjectCard from '../project-card/project-card';
 import TitleElastic from '../title-elastic/title-elastic';
 
@@ -59,7 +59,7 @@ const PortfolioPreview = () => {
                 {getProjectsItems(projectsPreview)}
             </div>
             <div className="portfolio-preview__container-button">
-                <ButtonAnimated internalLink={true} url="/portfolio" content="Discover All Projects" />
+                <ButtonLarge url="/portfolio" content="Discover All Projects" />
             </div>
         </div>
     )
