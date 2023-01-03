@@ -6,18 +6,15 @@ import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
 import TitleElastic from '../../components/title-elastic/title-elastic';
 
+// Import API
+import project from '../../api/projects.json';
+
 import './portfolio.scss';
 
 const Portfolio = () => {
 
-    const [projects, setProjects] = useState('Empty');
+    const [projects, setProjects] = useState(project.projects);
 
-    // Get projects by API
-    React.useEffect(() => {
-        fetch('/api/projects')
-            .then((res) => res.json())
-            .then((data) => setProjects(data.project.projects));
-    }, []);
 
     /**
      * Create a function that gets
