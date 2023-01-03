@@ -2,7 +2,7 @@
     "projects": [
         {
             "projectId": 5,
-            "projectImage": "http://localhost:8000/images/moving-company.webp",
+            "projectImage": "movingCompanyImage",
             "projectTitle": "Brandimarte",
             "projectDescription": "Website for Moving Company made with Symfony",
             "showRepository": true,
@@ -12,7 +12,7 @@
         },
         {
             "projectId": 4,
-            "projectImage": "http://localhost:8000/images/london-eye.webp",
+            "projectImage": "londonEyeImage",
             "projectTitle": "ViaggIn",
             "projectDescription": "Travel Magazine made with WordPress",
             "showRepository": true,
@@ -22,7 +22,7 @@
         },
         {
             "projectId": 3,
-            "projectImage": "http://localhost:8000/images/typewriter.webp",
+            "projectImage": "typewriterImage",
             "projectTitle": "Words Counter",
             "projectDescription": "Words Counter made with React",
             "showRepository": true,
@@ -32,7 +32,7 @@
         },
         {
             "projectId": 2,
-            "projectImage": "http://localhost:8000/images/space.webp",
+            "projectImage": "spaceImage",
             "projectTitle": "Nasa Gallery",
             "projectDescription": "Web App made with React and NASA's APIs",
             "showRepository": true,
@@ -42,7 +42,7 @@
         },
         {
             "projectId": 1,
-            "projectImage": "http://localhost:8000/images/quickbook.webp",
+            "projectImage": "quickbookImage",
             "projectTitle": "Quickbooks",
             "projectDescription": "Web App made with React",
             "showRepository": true,

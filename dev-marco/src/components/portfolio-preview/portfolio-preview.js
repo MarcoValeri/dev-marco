@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
-
 import ButtonLarge from '../button-large/button-large';
 import ProjectCard from '../project-card/project-card';
 import TitleElastic from '../title-elastic/title-elastic';
+
+// Import images
+import londonEyeImage from '../../images/london-eye.webp';
+import movingCompanyImage from '../../images/moving-company.webp';
+import quickbookImage from '../../images/quickbook.webp';
+import spaceImage from '../../images/space.webp';
+import typewriterImage from '../../images/typewriter.webp';
+
+// Import API
+import project from '../../api/projects.json';
 
 import './portfolio-preview.scss';
 
 const PortfolioPreview = () => {
 
-    const [projectsPreview, setProjectsPreview] = useState('');
+    const projects = project.projects;
 
-    // Get projectsPreview by APIs
-    React.useEffect(() => {
-        fetch('/api/projects')
-            .then(res => res.json())
-            .then(data => setProjectsPreview(data.project.projects));
-    }, []);
+    /**
+     * Create a function that gets
+     * @param string getImage
+     * and
+     * @return the right image component if
+     * that exist.
+     *
+     * The function works with api/project.json
+     */
+    const getImageProject = (getImage) => {
+        // TODO: improve this logic
+        if (getImage === "londonEyeImage") {
+            return londonEyeImage;
+        } else if (getImage === "movingCompanyImage") {
+            return movingCompanyImage;
+        } else if (getImage === "quickbookImage") {
+            return quickbookImage;
+        } else if (getImage === "spaceImage") {
+            return spaceImage;
+        } else if (getImage === "typewriterImage") {
+            return typewriterImage;
+        }
+    }
 
     /**
      * Create a function that gets
@@ -36,7 +61,7 @@ const PortfolioPreview = () => {
                     output.push(
                         <ProjectCard
                             key={index}
-                            projectImage={project.projectImage}
+                            projectImage={getImageProject(project.projectImage)}
                             projectTitle={project.projectTitle}
                             projectDescription={project.projectDescription}
                             showRepository={project.showRepository}
@@ -56,7 +81,7 @@ const PortfolioPreview = () => {
         <div className="portfolio-preview">
             <TitleElastic title="Latest Projects" />
             <div className="portfolio-preview__container-projects">
-                {getProjectsItems(projectsPreview)}
+                {getProjectsItems(projects)}
             </div>
             <div className="portfolio-preview__container-button">
                 <ButtonLarge url="/portfolio" content="Discover All Projects" />
