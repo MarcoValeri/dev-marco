@@ -4,7 +4,7 @@
     padding: 1rem;
     cursor: pointer;
     font-family: 'Fuzzy Bubbles', cursive;
-    
+
     &__circle {
         font-weight: 600;
         align-items: center;
@@ -34,13 +34,13 @@
             width: 20px;
             height: 20px;
             display: inline-block;
-            background: url('http://localhost:8000/images/arrow-right-blue.svg') no-repeat top right;
+            background: url('/images/arrow-right-blue.svg') no-repeat top right;
             transition: all .5s;
         }
 
         &:hover::after {
             right: 15px;
-            background: url('http://localhost:8000/images/arrow-right-green.svg') no-repeat top right;
+            background: url('/images/arrow-right-green.svg') no-repeat top right;
         }
     }
 }
