@@ -2,11 +2,7 @@
     "projects": [
         {
             "projectId": 5,
-<<<<<<< HEAD
-            "projectImage": "http://localhost:8000/images/moving-company.webp",
-=======
             "projectImage": "movingCompanyImage",
->>>>>>> feature/remove-server
             "projectTitle": "Brandimarte",
             "projectDescription": "Website for Moving Company made with Symfony",
             "showRepository": true,
@@ -16,11 +12,7 @@
         },
         {
             "projectId": 4,
-<<<<<<< HEAD
-            "projectImage": "http://localhost:8000/images/london-eye.webp",
-=======
             "projectImage": "londonEyeImage",
->>>>>>> feature/remove-server
             "projectTitle": "ViaggIn",
             "projectDescription": "Travel Magazine made with WordPress",
             "showRepository": true,
@@ -30,11 +22,7 @@
         },
         {
             "projectId": 3,
-<<<<<<< HEAD
-            "projectImage": "http://localhost:8000/images/typewriter.webp",
-=======
             "projectImage": "typewriterImage",
->>>>>>> feature/remove-server
             "projectTitle": "Words Counter",
             "projectDescription": "Words Counter made with React",
             "showRepository": true,
@@ -44,11 +32,7 @@
         },
         {
             "projectId": 2,
-<<<<<<< HEAD
-            "projectImage": "http://localhost:8000/images/space.webp",
-=======
             "projectImage": "spaceImage",
->>>>>>> feature/remove-server
             "projectTitle": "Nasa Gallery",
             "projectDescription": "Web App made with React and NASA's APIs",
             "showRepository": true,
@@ -58,11 +42,7 @@
         },
         {
             "projectId": 1,
-<<<<<<< HEAD
-            "projectImage": "http://localhost:8000/images/quickbook.webp",
-=======
             "projectImage": "quickbookImage",
->>>>>>> feature/remove-server
             "projectTitle": "Quickbooks",
             "projectDescription": "Web App made with React",
             "showRepository": true,

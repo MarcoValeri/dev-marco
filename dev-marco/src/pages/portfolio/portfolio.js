@@ -4,8 +4,6 @@ import Header from '../../components/header/header';
 import ProjectCard from '../../components/project-card/project-card';
 import TitleElastic from '../../components/title-elastic/title-elastic';
 
-<<<<<<< HEAD
-=======
 // Import images
 import londonEyeImage from '../../images/london-eye.webp';
 import movingCompanyImage from '../../images/moving-company.webp';
@@ -13,7 +11,6 @@ import quickbookImage from '../../images/quickbook.webp';
 import spaceImage from '../../images/space.webp';
 import typewriterImage from '../../images/typewriter.webp';
 
->>>>>>> feature/remove-server
 // Import API
 import project from '../../api/projects.json';
 
@@ -21,10 +18,6 @@ import './portfolio.scss';
 
 const Portfolio = () => {
 
-<<<<<<< HEAD
-    const [projects, setProjects] = useState(project.projects);
-
-=======
     const projects = project.projects;
 
     /**
@@ -50,7 +43,6 @@ const Portfolio = () => {
             return typewriterImage;
         }
     }
->>>>>>> feature/remove-server
 
     /**
      * Create a function that gets
